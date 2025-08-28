@@ -1,0 +1,21 @@
+/* Custom modern select styling */
+.custom-select-modern {
+  padding-right: 2.5rem; /* space for custom arrow */
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-image:
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2354a0ff' class='bi bi-chevron-down' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem 1rem;
+}
+
+.custom-select-modern:focus {
+  border-color: #2e86de;
+  box-shadow: 0 0 0 0.25rem rgba(84, 160, 255, 0.25);
+  outline: none;
+}
+.sidecontainer{
+}

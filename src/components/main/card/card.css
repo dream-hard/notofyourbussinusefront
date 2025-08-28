@@ -1,0 +1,82 @@
+.card-hover {
+      cursor: pointer; /* indicate clickable */
+  transition: transform 0.25s ease, box-shadow 0.25s ease ,border-radius 0.3s ease !important;
+    box-shadow:1.3px 0px 1px 0px rgba(0, 0, 0, 0.09) ,-1.3px 0px 1px 0px rgba(0, 0, 0, 0.09)  !important; /* subtle base shadow */
+
+}
+
+.card-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 1.5px 3px 1px rgba(0, 0, 0, 0.35) !important; /* subtle base shadow */
+  border-radius: 0.8rem !important;
+}
+.category-link:hover {
+  color: #212529 !important; /* darker text */
+  text-decoration: none;
+}
+/* App.css */
+
+.card-hover {
+  transition: transform 0.1s ease, box-shadow 0.3s ease ,border-radius 0.8s ease  ;
+}
+
+.card-hover:hover {
+    
+  transform: translateY(-2px) scale(1.05); /* lift & enlarge */
+}
+
+.header-hover {
+    
+    left: 0;
+    width: 100%;
+  background-color: #78b5ff;
+  color: #555;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease,max-height 0.9s ease;
+}
+.header-hover span {
+    white-space: nowrap;
+opacity: 1;
+}
+
+.header-hover  i{
+opacity: 1;
+}
+
+.card-hover:hover .header-hover span{
+opacity: 1;
+
+
+}
+
+.card-hover:hover .header-hover i{
+opacity: 1;
+}
+.card-hover:hover .header-hover {
+  background-color: #ffffff; /* Soft blue */
+  color: white;
+    transition: background-color 0.3s ease, color 0.3s ease,max-height 0.9s ease;
+}
+
+
+.responsive-title {
+  font-size: 0.857em;
+  line-height: 1.167em;
+  height: 2.334em;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .responsive-title {
+    font-size: 1em;
+    line-height: 1.28572em;
+    height: 2.57144em;
+  }
+}
+
+.btn-xs {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 0.2rem;
+}

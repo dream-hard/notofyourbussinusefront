@@ -1,0 +1,355 @@
+
+/* Hide Bootstrap’s default arrow backgrounds */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none;
+}
+.navbar-brand{
+  position: relative;
+  left: -4%;
+}
+
+/* Base styling for both arrows */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+/* Hover effect */
+.custom-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Position “prev” on the left */
+.carousel-control-prev.custom-arrow {
+  left: 1rem;
+  right: auto;
+}
+
+/* Position “next” on the right */
+.carousel-control-next.custom-arrow {
+  right: 1rem;
+  left: auto;
+}
+
+/* Icon sizing and pop on hover */
+.custom-arrow i {
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+.custom-arrow:hover i {
+  transform: scale(1.1);
+}
+
+
+
+/* Ensure this file is loaded *after* Bootstrap’s CSS */
+
+/* 1) Wrapper: only show lg+ */
+.app-header {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  padding: 0.75rem 1rem;
+  gap: 0rem;
+min-width: max-content;
+  max-width: 85%;    /* center on very wide screens */
+}
+@media (min-width:1100px) {
+  .app-header{
+    gap: 3rem;
+  }
+  
+}
+
+
+.header-footer{
+  
+ display: flex ;
+  flex-flow: row !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap;
+  padding: 0.75rem 1rem;
+min-width: max-content;
+  max-width: 100%;  }
+  .header-footer .btn{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap:2rem;
+    width: max-content;
+  }
+
+  .header-footer .btn:active{
+    border: none !important;
+    outline: none !important;
+  }
+  .conter{
+    display: flex;
+    flex-flow: row nowrap;
+    width: max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+   
+
+
+  }
+  .conter-link{
+     font-size: 1.1rem;
+      text-decoration: none;
+  background-color: transparent;
+    color: black;
+  }
+  .conter-link:hover{
+  
+  color: #0d6efd;
+  }
+
+/* 2) Home icon */
+.home-link {
+  flex-shrink: 0;
+}
+.home-icon {
+  width: 9rem;
+  
+  height: auto;
+}
+
+/* 3) Search group: FORCE fixed width */
+.search-group {
+  /* Override any Bootstrap defaults */
+  flex: 0 0 auto !important;
+  max-width: 690px !important;        /* fixed width on lg */
+  margin: 0 1rem !important;
+  min-width: 0;                   /* allow the input itself to shrink if necessary */
+  height: 3.3rem;
+}
+
+/* Widen slightly on xl screens */
+@media (min-width: 1900px) {
+  .search-group {
+    width: 700px !important;
+  }
+  .app-header{
+      max-width: 1140px;    /* center on very wide screens */
+
+  }
+  .main-row{
+ 
+    align-self: center !important;
+    max-width: 1140px;
+
+  }
+  .fff{
+    
+  display: flex;
+  flex-flow: column nowrap;
+}
+.mainn{
+  overflow: hidden;
+  display: flex !important;
+  flex-flow: column nowrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  justify-items: center;
+  align-content: center;
+}
+.footer{
+  width: 100%;
+  background-color: rgb(32, 112, 210)!important;
+}
+.footer .container{
+    background-color: rgb(32, 112, 210) !important;
+
+    min-width: 1140px;
+      max-width: 1140px;
+}
+.navbar{
+  width: 100%;
+  background-color: rgb(32, 112, 210) !important;
+}
+.navbar .container-fluid{
+  min-width: 1140px;
+      max-width: 1140px;
+}
+.header-footer{
+      max-width: 1140px !important;
+
+}
+}
+
+
+/* Square off the joint between input & button */
+.search-group .form-control {
+  padding-right: 2rem;
+  border-radius: 2rem !important;
+  border: 0.1rem solid rgb(58 103 118) !important; 
+    border-left:none !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+
+    
+  outline: none !important;
+}
+.search-group .btn {
+  width: 5rem;
+  background-color:rgb(58 103 118);
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important; 
+  border-right: none !important;
+  border-color: rgb(58, 103, 118);
+  color: white;
+}
+
+/* 4) Text logo */
+.site-logo {
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+
+/* 2) Match button rounding on the right */
+.search-group .btn {
+  border-radius: 1.5rem 0rem 0rem 1.5rem;
+}
+
+/* 3) Remove default focus ring and add subtle border-color change */
+.search-group .form-control:focus {
+  outline: none !important;                  /* no native outline */
+  box-shadow: none !important;               /* no glow */
+}
+
+.header-row{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/*/////////////////   side nav bar settings  ////////////////*/
+/* Sidebar */
+/* Sidebar */
+
+/* Sidebar */
+.sidebarr {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  right: -250px;
+
+  top: 0;
+  background-color: #f8f9fa;
+  transition: right 0.3s ease;
+  z-index: 1040;
+  overflow-y: auto;
+
+}
+
+.sidebarr.opeen {
+  right: 0;
+}
+.navbarmain{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end !important;
+  align-items: end;
+  
+}
+.search-wrapper {
+  overflow: hidden !important;
+
+  transition: max-height 0.4s ease !important;
+}
+.fdfdf{
+  min-width: max-content;
+  position: absolute;
+  top: 104%;
+  left: 0;
+  z-index: 1000;
+  background-color: #dfe2e6e5 !important;
+
+}
+.fdfdfd{
+  min-width: max-content;
+  position: absolute;
+  top: 93%;
+  left: 1%;
+  z-index: 1000;
+  background-color: #e9ecefef !important;
+
+}
+.seachicon{
+  display: inline-block;
+}
+@media (min-width: 1000px){
+.seachicon{
+display: none !important;
+}
+}
+
+@media (min-width: 768px) {
+  .searchform{
+
+}
+
+.navbarmain{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: end;
+  
+}
+  .sidebarr {
+    right: 0 ;
+    position: relative;
+  }
+}
+
+
+/* Main Content */
+.mainn {
+  margin-right: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .mainn {
+    margin-right: 250px;
+    transition: margin-right 0.3s ease;
+  }
+}
+.conmain{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+.banner-caption{
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.carousel-item:hover .banner-caption{
+  
+  opacity: 1;
+  transition: all 0.3s ease;
+
+}
